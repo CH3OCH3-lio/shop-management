@@ -128,6 +128,7 @@ void MainWindow::on_input_clicked()
 void MainWindow::on_findbtn_clicked()
 {
     QString list;
+    int s=0;
     QMap<QString ,Good*>::Iterator it;
     for(it=shop.begin();it!=shop.end();it++)
         {
@@ -137,9 +138,13 @@ void MainWindow::on_findbtn_clicked()
 
                 str =QString("%1已经缺货，请及时补货").arg(it.value()->getname());
                 str=str+"\n";
+                s++;
             }
             list=list+str;
         }
+    if(s==0) QMessageBox::information(this,"提示","库存中未存在缺货商品");
+    else QMessageBox::information(this,"提示","以为你展示全部缺货商品");
+
     ui->textEdit->setText(list);
 }
 
@@ -243,6 +248,16 @@ void MainWindow::on_paytotal_clicked()
         QMap<QString ,Good*>::Iterator it;
     QString sb;
     QString spr;
+    int number =0;
+    for(it=car.begin();it!=car.end();it++)
+    {
+        number++;
+    }
+    if(number==0)
+    {
+      QMessageBox::information(this,"购买提示","购物车中未添加商品");
+      return;
+    }
     sb=QString("第%1次操作 ，").arg(count);
     water+=sb;
         for(it=car.begin();it!=car.end();it++)
@@ -274,6 +289,7 @@ void MainWindow::on_paytotal_clicked()
         item_model_2->setHorizontalHeaderLabels(column2);                // 设置水平表头标签
         item_model_2->setVerticalHeaderLabels(row2);
         table_view_2->setEditTriggers(QTreeView::NoEditTriggers);
+
 
 }
 

@@ -29,7 +29,9 @@ void login::on_pushButton_clicked()
             QMessageBox::information(this,"登录提示","登录成功");
             this->close();
             MainWindow * t=new MainWindow;
-            t->setWindowTitle("商店管理系统");
+            t->setWindowTitle("超市进销管理系统");
+            t->setFixedSize(850,570);
+            t->setWindowIcon(QIcon(":/photo/shop.jpg"));
             t->show();
 
         }
