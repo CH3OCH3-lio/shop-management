@@ -46,7 +46,7 @@ void login:: paintEvent(QPaintEvent *)
 {
     QPainter painter(this);
     QPixmap pix;
-    pix.load(":/photo/u=3749878971,1630357328&fm=26&gp=0.jpg");
+    pix.load(":/photo/u=2413354430,3009708332&fm=26&gp=0.jpg");
     painter.drawPixmap(0,0,this->width(),this->height(),pix);
 
     //  画背景上图标
