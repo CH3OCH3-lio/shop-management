@@ -154,6 +154,7 @@ void MainWindow::on_pushButton_clicked()
     item_model->clear();
     item_model = new QStandardItemModel(8,4);  // 4行4列
     table_view->setModel(item_model);//两者关联
+    //table_view->setSortingEnabled(true);
     QStringList column, row;//行列表头
     column << "商品名称" << "条形码" << "商品数量" << "商品进价" << "商品售价"  << "供应商" ;
     row << "1" << "2" << "3" << "4";
@@ -283,6 +284,7 @@ void MainWindow::on_paytotal_clicked()
         item_model_2->clear();
         item_model_2 = new QStandardItemModel(8,4);  // 4行4列
         table_view_2->setModel(item_model_2);//两者关联
+        //table_view_2->setSortingEnabled(true);
         QStringList column2, row2;//行列表头
         column2 << "商品名称" << "条形码" << "购买数量"  << "商品价格"  << "供应商" << "总计";
         row2 << "1" << "2" << "3" << "4";
