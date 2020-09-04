@@ -1,0 +1,40 @@
+\usepackage{floatrow}% 浮动体增强宏包
+\usepackage{subcaption}% 子图排版
+\usepackage{amsmath}% 数学宏包
+\usepackage{booktabs}% 三线表格
+\usepackage{longtable}% 跨页长表格
+\usepackage{multirow,makecell}% 表格行合并，单元格处理
+\usepackage{ulem}% 下划线
+\usepackage[backend=biber,
+                style=gb7714-2015,
+                maxbibnames=99,% 著录所有作者
+                maxcitenames=2,% 引用标注中最多显示2个作者
+                mincitenames=1,% 3个及3个以上的作者截断为1个作者
+                gbpub=false,
+                gbnamefmt=familyahead,
+                url=false,
+                doi=false,
+                isbn=false,
+                gbfieldtype=true, % 输出学位论文标识
+                ]{biblatex} % 参考文献
+
+% =========命令行窗口及代码排版(自己开发的宏包)=========
+% 请确保工作目录中存在boxie.sty、fvextra.sty和lstlinebgrd.sty三个文件
+\usepackage{boxie}
+% =========插图标注宏包(修改为标注框可以换行)=========
+% 请确保工作目录中存在tikz-imglabels.sty文件
+\usepackage{tikz-imglabels}
+% =========流程图宏包(自己开发)=========
+% 请确保工作目录中存在tikz-flowchart.sty文件
+\usepackage{tikz-flowchart}
+
+\usepackage{pgf-umlcd}% UML图宏包
+\usepackage[ruled,linesnumbered]{algorithm2e}% 算法排版宏包
+\usepackage{siunitx}% 标准单位符号宏包
+\usepackage{csquotes}% 引号宏包
+\usepackage{hyperref}% hyperref 需要最后引入
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master:"../main.tex"
+%%% End:
